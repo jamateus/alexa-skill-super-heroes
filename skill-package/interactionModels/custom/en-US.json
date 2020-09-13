@@ -1,7 +1,7 @@
 {
   "interactionModel": {
     "languageModel": {
-      "invocationName": "primeira skill",
+      "invocationName": "herois",
       "intents": [
         {
           "name": "AMAZON.CancelIntent",
@@ -16,21 +16,59 @@
           "samples": []
         },
         {
-          "name": "GetPublisherIntent",
-          "slots": [
-            {
-              "name": "hero",
-              "type": "Hero"
-            }
-          ],
+          "name": "HelloWorldIntent",
+          "slots": [],
           "samples": [
-            "de onde é o {hero}",
-            "de qual editora é o {hero}"
+            "hello",
+            "how are you",
+            "say hi world",
+            "say hi",
+            "hi",
+            "say hello world",
+            "say hello"
           ]
         },
         {
           "name": "AMAZON.NavigateHomeIntent",
           "samples": []
+        },
+        {
+          "name": "AMAZON.FallbackIntent",
+          "samples": []
+        },
+        {
+          "name": "WhatsTheintentAbout",
+          "slots": [],
+          "samples": [
+            "o que faz essa intent",
+            "essa intenção é de que",
+            "sobre o que fala essa intent",
+            "sobre o que fala essa intenção"
+          ]
+        },
+        {
+          "name": "InfoAboutCharacters",
+          "slots": [],
+          "samples": [
+            "personagens",
+            "quais as personagens",
+            "fala-me das personagens"
+          ]
+        },
+        {
+          "name": "GetCharacterIntent",
+          "slots": [
+            {
+              "name": "heroi",
+              "type": "Hero"
+            }
+          ],
+          "samples": [
+            "fala-me do {heroi}",
+            "conta-me sobre o {heroi}",
+            "quero saber mais do {heroi}",
+            "fala-me mais sobre o {heroi}"
+          ]
         }
       ],
       "types": [
@@ -41,8 +79,7 @@
                 "value": "capitão américa",
                 "synonyms": [
                   "steve rodgers",
-                  "capitao america",
-                  "capitao",
+                  "capitão américa",
                   "capitão"
                 ]
               }
@@ -62,8 +99,7 @@
                 "value": "superman",
                 "synonyms": [
                   "clark kent",
-                  "super homem",
-                  "escoteiro"
+                  "super homem"
                 ]
               }
             },
@@ -80,8 +116,13 @@
           ],
           "name": "Hero"
         }
-      ]
+      ],
+      "modelConfiguration": {
+        "fallbackIntentSensitivity": {
+          "level": "LOW"
+        }
+      }
     }
   },
-  "version": "4"
+  "version": "6"
 }
